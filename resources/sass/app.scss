@@ -1,0 +1,41 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+html{
+    height: 100%;
+    min-height: 100%;
+}
+body{
+    min-height: 100%;
+}
+.table-responsive, .table-responsive-sm{
+    min-height: 738px;
+}
+/*
+.table th{
+    cursor: pointer;
+    &:hover{
+        background: #dee2e6;
+        transition: 0.3s ease;
+    }
+}
+
+.table tr{
+    cursor: pointer;
+    &:hover{
+        transition: 0.3s ease;
+    }
+}
+*/
+
+.table tr u {
+    cursor: pointer;
+}
+
+img {
+    pointer-events: none;
+}
