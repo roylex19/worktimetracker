@@ -24,15 +24,8 @@ class MeController extends Controller
         $dep = Department::where('id', $user->department_id)->first();
         $depsViews = Department_view::where('user_id', $user->id)->first() != null ? Department_view::where('user_id', $user->id)->first()['departments'] : [0];
 
-        $hours = DB::select('CALL get_user_hours(?,?,?)', [
-            $user->id,
-            date('m'),
-            date('Y')
-        ]);
-
         $user->department = $dep;
         $user->departmentsViews = $depsViews;
-        $user->hours = $hours ? $hours[0] : [];
 
         return response()->json($user);
     }

@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
                 ->onUpdate('cascade');
             $table->string('password')->default('')->nullable();
             $table->boolean('admin')->default(false)->nullable();
+            $table->boolean('disabled')->default(false)->nullable();
             $table->timestamps();
         });
     }

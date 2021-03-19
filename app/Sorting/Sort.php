@@ -13,7 +13,7 @@ class Sort{
 
     public function apply(){
         if(empty($this->sorts()))
-            return $this->builder->latest();
+            return $this->builder->latest('id');
 
         foreach ($this->sorts() as $sort => $value){
             if(method_exists($this, $sort) && $value){

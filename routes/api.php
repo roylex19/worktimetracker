@@ -59,10 +59,9 @@ Route::group([
 
 
 });
-Route::get('users/{id}/hours', 'Api\UserPageController@show');
 
 //<auth
-Route::get('/oauth/getToken', 'AuthController@getToken')->name('getToken');
-Route::get('/oauth/callback', 'AuthController@handleCallback');
-Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+//Route::get('/oauth/getToken', 'AuthController@getToken')->name('getToken');
+//Route::get('/oauth/callback', 'AuthController@handleCallback');
+//Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 //auth>

@@ -15,8 +15,8 @@ class ReportTrackerController extends Controller
         for ($i = 0; $i < count($days); $i++){
             $record = Record::selectRaw('SUM(hours) as hours')
                 ->where('user_id', auth()->user()->id)
-                ->whereRaw("WEEKDAY(date) = $i")
-                ->whereRaw("WEEK(date, 1) = WEEK(CURRENT_DATE(), 1)")
+                ->whereRaw("extract(dow from date) = ($i+1)")
+                ->whereRaw("extract(week from date) = extract(week from current_date)")
                 ->get()[0];
 
             $hours = isset($record->hours) ? $record->hours : 0;
