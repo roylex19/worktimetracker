@@ -15,17 +15,17 @@ class CreateRecordsTable extends Migration
     {
         Schema::create('records', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('project_id');
+            $table->integer('project_id');
             $table->foreign('project_id')
                 ->references('id')
                 ->on('projects')
                 ->onUpdate('cascade');
-            $table->unsignedBigInteger('user_id');
+            $table->integer('user_id');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
                 ->onUpdate('cascade');
-            $table->unsignedBigInteger('boss_id')->nullable();
+            $table->integer('boss_id')->nullable();
             $table->string('description')->default('')->nullable();
             $table->date('date');
             $table->float('hours', 4,1);

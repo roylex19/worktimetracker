@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->default('')->nullable();
             $table->string('phone')->unique()->default('')->nullable();
-            $table->unsignedBigInteger('department_id')->nullable();
+            $table->integer('department_id')->nullable();
             $table->foreign('department_id')
                 ->references('id')
                 ->on('departments')

@@ -15,7 +15,7 @@ class CreateDepartmentViewsTable extends Migration
     {
         Schema::create('department_views', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id')->nullable();
+            $table->integer('user_id')->nullable();
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
