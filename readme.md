@@ -2,8 +2,6 @@
 
 Проект был разработан для контроля выполненных работ по проектам.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
 ## Возможности
 
 <ul>
